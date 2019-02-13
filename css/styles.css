@@ -2262,7 +2262,7 @@ header.one-page .navbar-nav > li > a span {
 }
 /*----- COUNTER LAYOUT 01 ----*/
 .section-counter-bg {
-  background-image: url("../images/whyus.jpg");
+  background-image: url("../images/whyus1.jpg");
   background-repeat: repeat;
   background-position: bottom center;
   background-size: cover;
@@ -2463,7 +2463,7 @@ header.one-page .navbar-nav > li > a span {
 }
 /*----- TESTIMONIAL LAYOUTS ----*/
 .section-testimonial-bg {
-  background-image: url("../images/testimony.jpg");
+  background-image: url("../images/feedback.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -2774,7 +2774,7 @@ header.one-page .navbar-nav > li > a span {
   font-weight: 800;
 }
 /*----- SECTION APPOINTMENT ----*/
-.section-appointment-bg {
+ppointment-bg {
   background: #FAFAFA;
 }
 .appointment-form-wrapper {
@@ -2837,7 +2837,7 @@ header.one-page .navbar-nav > li > a span {
 .appointment-form-wrapper .appoinment-form input[type=email],
 .appointment-form-wrapper .appoinment-form input[type=url],
 .appointment-form-wrapper .appoinment-form input[type=password] {
-  color: #959595;
+  color: black; 
   border: 1px solid #ebebeb;
   line-height: 42px;
   padding-right: 32px;
@@ -2874,7 +2874,7 @@ header.one-page .navbar-nav > li > a span {
 }
 .appointment-form-wrapper .appoinment-form textarea {
   resize: none;
-  color: #959595;
+  color: black;
   border: 0px;
   border: 1px solid #ebebeb;
   padding-left: 2px;
@@ -4465,7 +4465,7 @@ footer .social-icons a {
   font-size: 14px;
   height: 40px;
   line-height: 40px;
-  margin-right: 5px;
+  margin-right: 20px;
   position: relative;
   text-align: center;
   -webkit-transition: all 0.1s ease-out;
@@ -4564,8 +4564,9 @@ footer .social-icons a:hover {
   color: #b00000;
 }
 .footer-widget-area .opening-shedule li {
+  width: 250px;
   border-bottom: 1px solid #666666;
-  padding: 12px 0px 12px;
+  padding: 12px 0px 10px;
   color: #FFFFFF;
 }
 .footer-widget-area .opening-shedule li:first-child {

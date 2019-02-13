@@ -7,7 +7,7 @@ if (!isset($_REQUEST['safety_key'])) {
 
 // Admin Email.
 
-$to = "namvu47@gmail.com"; // write you email address in here.
+$to = "cskh@homedeli.vn"; // write you email address in here.
 // Fetching Values from URL.
 
 $user_name = $_POST['user_name'];

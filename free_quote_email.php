@@ -7,7 +7,7 @@ if (!isset($_REQUEST['safety_key'])) {
 
 // Admin Email.
 
-$to = "namvu47@gmail.com"; // write your email address in here.
+$to = "cskh@homedeli.vn"; // write your email address in here.
 // Fetching Values from URL.
 
 $email_subject = "Request A Free Quote";
