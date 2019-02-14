@@ -1224,7 +1224,7 @@ a.btn-about:hover {
   display: inline-block;
   transition: all 0.3s ease-out 0s;
   border-radius: 0;
-  font-size: 14px;
+  font-size: 18px;
   margin-right: 10px;
   height: 24px;
   line-height: 24px;
@@ -4462,7 +4462,7 @@ footer .social-icons a {
   background: #b00000;
   color: #FFFFFF;
   display: inline-block;
-  font-size: 14px;
+  font-size: 18px;
   height: 40px;
   line-height: 40px;
   margin-right: 20px;
