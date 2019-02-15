@@ -1248,6 +1248,39 @@ a.btn-about:hover {
   line-height: 48px;
   font-size: 14px;
 }
+
+.text-rolling {
+ /* Starting position */
+-moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);  
+ transform:translateX(100%);
+ /* Apply animation to this element */  
+ -moz-animation: top-bar-link 5s linear infinite;
+ -webkit-animation: top-bar-link 15s linear infinite;
+ animation: top-bar-link 15s linear infinite;
+}
+/* Move it (define the animation) */
+  @-moz-keyframes top-bar-link {
+   0%   { -moz-transform: translateX(100%); }
+   100% { -moz-transform: translateX(-100%); }
+  }
+  @-webkit-keyframes top-bar-link {
+   0%   { -webkit-transform: translateX(100%); }
+   100% { -webkit-transform: translateX(-100%); }
+  }
+  @keyframes top-bar-link {
+   0%   { 
+   -moz-transform: translateX(100%); /* Firefox bug fix */
+   -webkit-transform: translateX(100%); /* Firefox bug fix */
+   transform: translateX(100%);     
+   }
+   100% { 
+   -moz-transform: translateX(-100%); /* Firefox bug fix */
+   -webkit-transform: translateX(-100%); /* Firefox bug fix */
+   transform: translateX(-100%); 
+   }
+  }
+}
 .header-container {
   border-bottom: 0px solid #EEEEEE;
   padding-bottom: 0px;
@@ -2774,7 +2807,7 @@ header.one-page .navbar-nav > li > a span {
   font-weight: 800;
 }
 /*----- SECTION APPOINTMENT ----*/
-ppointment-bg {
+appointment-bg {
   background: #FAFAFA;
 }
 .appointment-form-wrapper {
