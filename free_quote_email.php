@@ -48,7 +48,7 @@ mail($to, $email_subject, $message, $headers, '');
 
 $data = array(
     'status' => 1,
-    'msg' => "Chúng tôi đã nhận được yêu cầu của Quý khách và sẽ liên hệ lại sớm nhất có thể."
+    'msg' => "Cảm ơn Quý khách hàng đã quan tâm và sử dụng dịch vụ của HOMEDELI. Nhân viên của chúng tôi sẽ liên hệ lại với Quý khách để tư vấn và cung cấp dịch vụ sau ít phút."
 );
 
 echo json_encode($data);

@@ -1528,7 +1528,7 @@ header.one-page .navbar-nav > li > a span {
   line-height: 48px;
   font-weight: 500;
   letter-spacing: 0;
-  color: #FFFFFF;
+  color: #333333;
 }
 .section-heading-wrapper-alt h3 {
   font-size: 20px;
@@ -2248,7 +2248,7 @@ header.one-page .navbar-nav > li > a span {
   padding: 70px 32px 32px 32px;
 }
 .process-step-1 {
-  padding: 24px;
+  padding: 0px;
   margin-top: 24px;
   margin-bottom: 24px;
   position: relative;
@@ -3853,7 +3853,7 @@ ul.pagination li:last-child {
   background-attachment: initial;
   background-position: center center;
   background-color: transparent;
-  background-image: url('../images/header-bg.jpg');
+  background-image: url('../images/serviceHomeMove.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   border: 0px solid #FFF;
@@ -4422,6 +4422,7 @@ ul.pagination li:last-child {
   border-bottom: 1px solid #919191;
 }
 .section-contact-block #contact-form textarea {
+  resize: none;
   border: 0px;
   border-bottom: 1px solid #EEE;
   padding-left: 2px;
