@@ -12,12 +12,14 @@ $to = "cskh@homedeli.vn"; // write you email address in here.
 
 $user_name = $_POST['user_name'];
 $user_email = $_POST['user_email'];
+$user_phone = $_POST['user_phone'];
 $email_subject = $_POST['email_subject'];
 $email_message = $_POST['email_message'];
 
 $template = '<div>Hello ' . $user_name . ',<br/>'
         . '<br/>Thank you...! For Contacting Us.<br/><br/>'
         . 'Name:' . $user_name . '<br/>'
+        . 'Phone:' . $user_phone . '<br/>'
         . 'Email:' . $user_email . '<br/>'
         . 'Message:' . $email_message . '<br/><br/>'
         . 'This is a Contact Confirmation mail.'
