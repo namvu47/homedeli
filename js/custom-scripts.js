@@ -769,7 +769,7 @@ jQuery(function ($) {
     }      
     
     
-    // CONTACT FORM 
+// CONTACT FORM 
     
     function email_checkRegexp( o, regexp ) {
         if (!(regexp.test(o.val()))) {
@@ -786,19 +786,20 @@ jQuery(function ($) {
         
         var $contact_submit_btn = $contact_form.find("button.btn-custom");
         var $user_name = $contact_form.find("#user_name");
+        var $user_phone = $contact_form.find("#user_phone");
         var $user_email = $contact_form.find("#user_email");
         var $email_subject = $contact_form.find("#email_subject");
         var $email_message = $contact_form.find("#email_message");
         
         var emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
         
-        var $all_fields = $([]).add($user_name).add($user_email).add($email_subject).add($email_message);
+        var $all_fields = $([]).add($user_name).add(user_phone).add($user_email).add($email_subject).add($email_message);
         
         
         $all_fields.val("");
         
         var $error_border =  "border-bottom: 1px solid red;";
-        var contact_form_bValid, user_name_bValid,user_email_bValid,user_email_subject_bValid, user_email_message_bValid;
+        var contact_form_bValid, user_name_bValid,user_phone_bValid,user_email_bValid,user_email_subject_bValid, user_email_message_bValid;
         
         
         $contact_form.find("button[type=submit]").on("click", function() {
@@ -818,6 +819,21 @@ jQuery(function ($) {
                 }
                 
                  contact_form_bValid = contact_form_bValid && user_name_bValid;
+
+                if( $user_phone.val() === "" ) {
+                    
+                    user_phone_bValid = false;
+                    $user_phone.next("span").remove();
+                    $user_phone.attr("style", $error_border).after("<span class='error'>" + $user_phone.attr("data-msg") + "</span>");
+                    
+                } else {
+                    user_phone_bValid = true;
+                    $user_phone.removeAttr("style").next("span").remove();
+                    
+                }
+                
+                 contact_form_bValid = contact_form_bValid && user_phone_bValid;
+
             
             
                 if( $user_email.val() === ""  || email_checkRegexp( $user_email , emailRegex) == false  ) {
@@ -874,6 +890,7 @@ jQuery(function ($) {
                     data: {
                         safety_key: 'dynatf',
                         user_name: $user_name.val(),
+                        user_phone: $user_phone.val(),
                         user_email: $user_email.val(),
                         email_subject: $email_subject.val(),
                         email_message: $email_message.val()
@@ -914,7 +931,7 @@ jQuery(function ($) {
         })
         
     }
-    
+
     
     // Appointment Form.
     
@@ -945,7 +962,7 @@ jQuery(function ($) {
         
         var emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
         
-        var $all_fields = $([]).add($move_from).add($move_to).add($moving_size).add($your_date).add($your_name).add($your_email).add($your_phone);
+        var $all_fields = $([]).add($move_from).add($move_to).add($moving_size).add($your_date).add($your_name).add($your_email).add($your_phone).add(your_comment);
         
         
         $all_fields.val("");
