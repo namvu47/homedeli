@@ -13,6 +13,7 @@ $to = "cskh@homedeli.vn"; // write you email address in here.
 $user_name = $_POST['user_name'];
 $user_phone = $_POST['user_phone'];
 $user_email = $_POST['user_email'];
+$user_phone = $_POST['user_phone'];
 $email_subject = $_POST['email_subject'];
 $email_message = $_POST['email_message'];
 
