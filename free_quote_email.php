@@ -12,7 +12,7 @@ if (!isset($_REQUEST['safety_key'])) {
 $to = "cskh@homedeli.vn"; // write your email address in here.
 // Fetching Values from URL.
 
-$email_subject = "Request A Free Quote";
+$email_subject = "[HomeDeli] Thông tin Yêu cầu";
 
 $move_from = isset( $_POST['move_from'] ) ? $_POST['move_from'] : '';
 $move_to = isset( $_POST['move_to'] ) ? $_POST['move_to'] : '';
@@ -29,24 +29,25 @@ $your_name = $_POST['your_name'];
 $your_email = $_POST['your_email'];
 $your_phone = $_POST['your_phone'];
 
-$template = '<div>Hello ' . $your_name . ',<br/>'
-        . '<br/>Thank you...! For Contacting Us.<br/><br/>'
-        . 'Moving From:' . $move_from . '<br/>'
-        . 'Moving To:' . $move_to . '<br/>'
-        . 'Moving Size:' . $moving_size . '<br/>'
-        . 'Moving Date:' . $your_date . '<br/>'
-        . 'Name:' . $your_name . '<br/>'
+$template = '<div>HomeDeli Kính chào Anh/ Chị ' . $your_name . ',<br/>'
+        . '<br/>Xin chân thành cảm ơn Anh chị vì đã quan tâm tới dịch vụ của HomeDeli<br/><br/>'
+        . 'Điểm đi:' . $move_from . '<br/>'
+        . 'Điểm đến:' . $move_to . '<br/>'
+        . 'Kích thước căn hộ:' . $moving_size . '<br/>'
+        . 'Ngày giờ chuyển:' . $your_date . '<br/>'
+        . 'Họ tên:' . $your_name . '<br/>'
         . 'Email:' . $your_email . '<br/>'
-        . 'Phone No:' . $your_phone . '<br/><br/>'
-        . 'Comment: ' . $your_comment . '<br/><br/>'
-        . 'This is a Free Quote Request Email</div>';
+        . 'Số điện thoại:' . $your_phone . '<br/><br/>'
+        . 'Mô tả chi tiết: ' . $your_comment . '<br/><br/>'
+		. 'Mô tả chi tiết: ' . $your_comment . '<br/><br/>'
 $message = "<div>" . $template . "</div>";
 
 
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers.='Content-type: text/html; charset=utf-8; charset=iso-8859-1' . "\r\n";
 $headers.='From:' . $your_email . "\r\n"; // Sender's Email
-SendMail($your_email, $to, $email_subject, $message);
+$headers .= 'Cc:' . $your_email . "\r\n";
+SendMail($your_email, $to,  $email_subject, $message,$header);
 
 $data = array(
     'status' => 1,

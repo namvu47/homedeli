@@ -212,7 +212,7 @@ $admin_email)
 
         return TRUE;
 }
-function SendMail($frommail,$tomail,$subject,$message)
+function SendMail($frommail,$tomail,$subject,$message,$header)
 {
 
 
