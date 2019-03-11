@@ -1,5 +1,7 @@
 <?php
 
+include 'smtp.php';
+
 if (!isset($_REQUEST['safety_key'])) {
 
     die();
@@ -44,7 +46,7 @@ $message = "<div>" . $template . "</div>";
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers.='Content-type: text/html; charset=utf-8; charset=iso-8859-1' . "\r\n";
 $headers.='From:' . $your_email . "\r\n"; // Sender's Email
-mail($to, $email_subject, $message, $headers, '');
+SendMail($your_email, $to, $email_subject, $message);
 
 $data = array(
     'status' => 1,
